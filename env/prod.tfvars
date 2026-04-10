@@ -1,0 +1,5 @@
+vpc_cidr            = "10.10.0.0/16"
+public_subnet_cidr  = "10.10.0.0/24"
+public_subnet_name  = "public-subnet-prod"
+environment         = "prod"
+az                  = "ap-southeast-2a"

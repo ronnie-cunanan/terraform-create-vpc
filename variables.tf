@@ -3,3 +3,24 @@ variable "region" {
   description = "AWS region"
   default     = "ap-southeast-2"
 }
+
+variable "vpc_cidr" {
+  type = string
+}
+
+variable "public_subnet_cidr" {
+  type = string
+}
+
+variable "public_subnet_name" {
+  type    = string
+  default = "public-subnet"
+}
+
+variable "environment" {
+  type = string
+}
+
+variable "az" {
+  type = string
+}
