@@ -1,13 +1,13 @@
 module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+  source  = "terraform-aws-modules/vpc/aws"
   version = "~> 5.0"
 
   name = "main-vpc"
-  cidr = "10.0.0.0/16"
+  cidr = var.vpc_cidr
 
-  azs = ["ap-southeast-2a"]
+  azs = [var.az]
 
-  public_subnets = ["10.0.0.0/24"]
+  public_subnets = [var.public_subnet_cidr]
 
   enable_dns_hostnames = true
   enable_dns_support   = true
@@ -16,10 +16,10 @@ module "vpc" {
   enable_vpn_gateway = false
 
   public_subnet_tags = {
-    Name = "public-subnet"
+    Name = var.public_subnet_name
   }
 
   tags = {
-    Environment = "dev"
+    Environment = var.environment
   }
 }
