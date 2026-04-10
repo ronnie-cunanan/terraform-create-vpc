@@ -18,7 +18,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/your/repo.git'
+                git branch: 'main', url: 'git branch: 'main', url: 'https://github.com/ronnie-cunanan/terraform-create-vpc.git'
             }
         }
 
