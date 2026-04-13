@@ -102,7 +102,7 @@ pipeline {
                 }
             }
         }
-        /*
+        
         stage('Terraform Apply (Dev)') {
             when {
                 expression { return ENVIRONMENT == 'dev' }
@@ -125,7 +125,7 @@ pipeline {
                 }
             }
         }
-        */
+        
     }
 
     post {
