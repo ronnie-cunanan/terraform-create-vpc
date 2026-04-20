@@ -1,5 +1,5 @@
 vpc_cidr            = "10.0.0.0/16"
 public_subnet_cidr  = "10.0.0.0/24"
-public_subnet_name  = "public-subnet-dev"
+private_subnet_cidr = "10.0.2.0/23"
 environment         = "dev"
 az                  = "ap-southeast-2a"
