@@ -1,6 +1,6 @@
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "~> 5.0"
+  version = "6.6.1"
 
   name = "main-vpc"
   cidr = var.vpc_cidr
@@ -16,7 +16,7 @@ module "vpc" {
   enable_vpn_gateway = false
 
   public_subnet_tags = {
-    Name = var.public_subnet_name
+    Name = "public-subnet-${var.environment}"
   }
 
   tags = {
