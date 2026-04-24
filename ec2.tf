@@ -8,7 +8,7 @@ module "ec2_instance" {
   instance_type = "t3.micro"
   key_name      = var.key_name
   monitoring    = true
-  subnet_id     = module.vpc.public_subnet_ids[0]
+  subnet_id     = module.vpc.public_subnet_id
 
   vpc_security_group_ids = [
     local.sg_map[each.key]

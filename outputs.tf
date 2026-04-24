@@ -1,5 +1,5 @@
 output "public_subnets" {
-  value = module.vpc.public_subnet_ids
+  value = module.vpc.public_subnet_id
 }
 
 output "all_instance_public_ips" {
