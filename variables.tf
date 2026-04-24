@@ -23,3 +23,13 @@ variable "az" {
 variable "private_subnet_cidr" {
   type = string
 }
+
+variable "key_name" {
+  type        = string
+  description = "Name of the EC2 key pair"
+}
+
+variable "instance_type" {
+  type = string
+  default = "t3.micro"
+}
