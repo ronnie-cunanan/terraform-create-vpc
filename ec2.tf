@@ -10,6 +10,8 @@ module "ec2_instance" {
   monitoring    = true
   subnet_id     = module.vpc.public_subnet_id
 
+  create_security_group = false
+  
   vpc_security_group_ids = [
     local.sg_map[each.key]
   ]
