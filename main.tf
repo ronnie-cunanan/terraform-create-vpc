@@ -29,7 +29,7 @@ module "iam_roles" {
   environment = var.environment
 
   roles = {
-    ec2_role = {
+    tf_ec2_role = {
       policies = [
         "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
         "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
@@ -37,7 +37,7 @@ module "iam_roles" {
       ]
     }
 
-    jenkins_role = {
+    tf_jenkins_role = {
       policies = [
         "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
         "arn:aws:iam::aws:policy/AmazonEC2FullAccess",
