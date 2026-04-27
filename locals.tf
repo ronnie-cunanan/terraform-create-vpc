@@ -5,3 +5,11 @@ locals {
     "worker-node"   = module.sg.security_group_ids[2]
   }
 }
+
+locals {
+  instance_profile_map = {
+    "cicd-server"   = module.iam_roles.instance_profile_names["jenkins_role"]
+    "control-plane" = module.iam_roles.instance_profile_names["ec2_role"]
+    "worker-node"   = module.iam_roles.instance_profile_names["ec2_role"]
+  }
+}

@@ -16,6 +16,8 @@ module "ec2_instance" {
     local.sg_map[each.key]
   ]
 
+  iam_instance_profile = local.instance_profile_map[each.key]
+
   root_block_device = {
     volume_type           = "gp3"
     volume_size           = each.key == "worker-node" ? 80 : 40
