@@ -51,6 +51,6 @@ resource "aws_iam_role_policy_attachment" "attachments" {
     ]) : pair.key => pair
   }
 
-  role       = each.value.role
+  role       = aws_iam_role.this[each.value.role_name].name
   policy_arn = each.value.policy_arn
 }
