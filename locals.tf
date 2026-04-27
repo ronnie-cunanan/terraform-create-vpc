@@ -8,8 +8,8 @@ locals {
 
 locals {
   instance_profile_map = {
-    "cicd-server"   = module.iam_roles.instance_profile_names["jenkins_role"]
-    "control-plane" = module.iam_roles.instance_profile_names["ec2_role"]
-    "worker-node"   = module.iam_roles.instance_profile_names["ec2_role"]
+    "cicd-server"   = module.iam_roles.instance_profile_names["tf_jenkins_role"]
+    "control-plane" = module.iam_roles.instance_profile_names["tf_ec2_role"]
+    "worker-node"   = module.iam_roles.instance_profile_names["tf_ec2_role"]
   }
 }
