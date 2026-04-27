@@ -4,7 +4,7 @@ variable "environment" {
 }
 
 variable "roles" {
-  description = "Map of IAM roles to create, with list of policy ARNs"
+  description = "Map of IAM roles to create, each with a list of policy ARNs"
   type = map(object({
     policies = list(string)
   }))
