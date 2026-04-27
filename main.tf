@@ -42,7 +42,8 @@ module "iam_roles" {
         "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
         "arn:aws:iam::aws:policy/AmazonEC2FullAccess",
         "arn:aws:iam::aws:policy/AmazonS3FullAccess", 
-        "arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess"        
+        "arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess",
+        "arn:aws:iam::aws:policy/IAMFullAccess"        
       ]
     }
   }
